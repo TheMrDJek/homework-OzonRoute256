@@ -24,6 +24,7 @@ GetSizeType, SaveBySize, IsForMainPage, SendItemsForMainPage - должны ос
  запрещается менять _dataFromExternalService и объект ItemDto
 
 Результаты:
+
    ![До](/assets/homework1Issue.png)
    
    ![После](/assets/homework1IssueResult.png)
