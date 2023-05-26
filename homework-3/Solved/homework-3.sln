@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{328E886C-5E7E-4223-8CDD-C808F0ED85D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{725BF327-4286-40B0-8189-6E7262EEA0DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{25CFD85F-56C3-4F1A-96F9-E5C440C80E32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RateLimiter.Web", "RateLimiter.Web\RateLimiter.Web.csproj", "{35950381-B4C4-4093-92D2-957D77C29F02}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{35950381-B4C4-4093-92D2-957D77C29F02} = {725BF327-4286-40B0-8189-6E7262EEA0DD}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35950381-B4C4-4093-92D2-957D77C29F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35950381-B4C4-4093-92D2-957D77C29F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35950381-B4C4-4093-92D2-957D77C29F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35950381-B4C4-4093-92D2-957D77C29F02}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

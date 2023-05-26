@@ -1,0 +1,55 @@
+create database homeworkDb;
+
+drop table if exists warehouses;
+create table warehouses
+(
+    id bigserial constraint pk_warehouses_id primary key ,
+    name text
+);
+
+insert into warehouses(name)
+SELECT md5(random()::text)
+FROM generate_series(1,20) g;
+
+select * from warehouses;
+
+drop table if exists clients;
+create table clients
+(
+    id bigserial constraint pk_clients_id primary key ,
+    name text
+);
+
+insert into clients(name)
+SELECT md5(random()::text)
+FROM generate_series(1,100) g;
+
+drop table if exists order_status;
+create table order_status
+(
+    id bigint primary key,
+    name text not null
+);
+
+insert into order_status(id, name)
+values (1, 'New'), (2, 'InProgress'), (3, 'Pending');
+
+drop table if exists orders;
+create table orders
+(
+    id uuid default gen_random_uuid(),
+    client_id bigint not null references clients(id),
+    creation_date timestamp not null default current_timestamp,
+    issue_date timestamp,
+    order_status_id bigint not null references order_status(id),
+    items_data json not null,
+    warehouse_id bigint not null references warehouses(id)
+) partition by list (warehouse_id);
+
+create table orders_war1 partition of orders for values in (1);
+create table orders_war2 partition of orders for values in (2);
+create table orders_war3 partition of orders for values in (3);
+create table orders_war4 partition of orders for values in (4);
+create table orders_war5 partition of orders for values in (5);
+
+create index on orders (warehouse_id);

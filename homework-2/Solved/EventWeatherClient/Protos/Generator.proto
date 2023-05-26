@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+option csharp_namespace = "EventWeatherGenerator";
+
+import "google/protobuf/timestamp.proto";
+
+package Generator;
+
+service Generator {
+  rpc EventsSubscriptionDuplex (stream EventStreamDuplexRequest) returns (stream EventSensorResponse);
+  rpc Subscribe (SubscribeRequest) returns (SubscribeResponse);
+  rpc UnSubscribe (UnSubscribeRequest) returns (UnSubscribeResponse);
+}
+
+message EventStreamDuplexRequest {
+  int32 settingDeley = 1;
+}
+
+message SubscribeRequest {
+  repeated int32 id = 1;
+}
+
+message SubscribeResponse {
+  repeated int32 id = 1;
+}
+
+message UnSubscribeRequest {
+  repeated int32 id = 1;
+}
+
+message UnSubscribeResponse {
+  repeated int32 id = 1;
+}
+
+message EventSensorResponse {
+  repeated EventSensor eventSensor = 1;
+}
+
+message EventSensor{
+  int32 id = 1;
+  double temperature = 2;
+  double humidity = 3;
+  int32 ppm = 4;
+  google.protobuf.Timestamp created_at = 5;
+}

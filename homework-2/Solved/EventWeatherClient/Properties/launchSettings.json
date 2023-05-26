@@ -1,0 +1,13 @@
+﻿{
+  "profiles": {
+    "EventWeatherClient": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:4000;https://localhost:4001",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

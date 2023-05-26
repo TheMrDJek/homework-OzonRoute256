@@ -1,0 +1,21 @@
+﻿{
+  "searchType": "Name",
+  "expression": "Robert John Downey Jr.",
+  "results": [
+    {
+      "id": "nm0000375",
+      "resultType": "Name",
+      "image": "https://imdb-api.com/images/original/MV5BNzg1MTUyNDYxOF5BMl5BanBnXkFtZTgwNTQ4MTE2MjE@._V1_Ratio0.7273_AL_.jpg",
+      "title": "Robert Downey Jr.",
+      "description": "(Actor, Iron Man (2008))"
+    },
+    {
+      "id": "nm0002049",
+      "resultType": "Name",
+      "image": "https://imdb-api.com/images/original/MV5BMTQxNjczNjg2NF5BMl5BanBnXkFtZTcwOTk4MTEzOA@@._V1_Ratio0.7273_AL_.jpg",
+      "title": "Robert Downey Sr.",
+      "description": "(Actor, To Live and Die in L.A. (1985))"
+    }
+  ],
+  "errorMessage": ""
+}
